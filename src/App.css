@@ -1,42 +1,73 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Định dạng toàn trang */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Container chính */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hộp welcome */
+.welcome-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Hiệu ứng fade-in */
+.welcome-box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.card {
-  padding: 2em;
+/* Tiêu đề */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Đoạn văn */
+p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Nút bấm */
+.btn {
+    background: #9013fe;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #6c0ecf;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
